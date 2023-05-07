@@ -1,0 +1,92 @@
+.news {
+    min-height: 780px;
+    background: url('../img/genshin-impact-uhdpaper.png') center center/cover no-repeat, url('../img/bgi.png');
+    padding: 170px 80px 80px 80px;
+    &__title {
+        font-weight: 400;
+        position: relative;
+        font-size: 36px;
+        color: var(--beige-color);
+        margin: 0 0 15px 180px;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 35px;
+            width: 27px;
+            background-image: url('../icons/iconnews.png');
+            left: -38px;
+            top: -1px;
+        }
+    }
+    .news__preview {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        &-img {
+            margin: 0 auto;
+            width: 1000px;
+            height: 410px;
+        }
+        &-icon {
+            width: 67px;
+            height: 83px;
+            cursor: pointer;
+            margin-top: 150px;
+        }
+    }
+    .news__carousel {
+        display: flex;
+        justify-content: center;
+        &-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--text-color);
+            margin: 133px 0 0 40px;
+        }
+    }
+}
+
+.slick-prev {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    img {
+        width: 67px;
+        height: 83px;
+    }
+}
+
+.slick-next {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    img {
+        width: 67px;
+        height: 83px;
+    }
+}
+
+.carousel {
+    list-style-type: none;
+    position: absolute;
+    bottom: -133px;
+    display: flex;
+    li {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #b8b8b8;
+        cursor: pointer;
+        &:not(:first-child) {
+            margin-left: 40px;
+        }
+        &.slick-active {
+            background-color: whitesmoke;
+        }
+        button {
+            border: none;
+            visibility: hidden;
+        }
+    }
+}
