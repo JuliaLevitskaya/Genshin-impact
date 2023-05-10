@@ -1,0 +1,60 @@
+.location {
+    min-height: 620px;
+    background: url('../img/locationbg.jpg') center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+    &__title {
+        font-weight: 400;
+        font-size: 36px;
+        color: var(--text-color);
+        margin-bottom: 130px;
+        margin-left: 30px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 35px;
+            width: 27px;
+            background-image: url(../icons/iconnews.png);
+            left: -38px;
+            top: -1px
+        }
+    }
+    &__regions {
+        display: flex;
+        .location__region {
+            background-image: url('../img/mondshtat.jpg');
+            width: 650px;
+            height: 250px;
+            border-radius: 10px;
+            position: relative;
+            &:hover {
+                transition: all 0.4s;
+                box-shadow: rgba(240, 175, 46, 0.4) 0px 5px, rgba(240, 195, 46, 0.3) 0px 10px, rgba(240, 195, 46, 0.2) 0px 15px, rgba(240, 185, 46, 0.1) 0px 20px, rgba(240, 182, 46, 0.05) 0px 25px;
+            }
+            &-img {
+                width: 600px;
+                height: 250px;
+                border-radius: 10px;
+                position: relative;
+            }
+            &-title {
+                font-weight: 400;
+                font-size: 36px;
+                color: var(--beige-color);
+                margin: 110px 0 0 48px;
+            }
+            &-character {
+                position: absolute;
+                right: 0;
+                bottom: -80px;
+                width: 340px;
+                height: 590px;
+            }
+        }
+        .location__region--second {
+            background-image: url('../img/liyue.jpg');
+        }
+    }
+}
